@@ -1,0 +1,11 @@
+<h1>Component Interaction</h1>
+
+@for (btn of buttons; track $index) {
+<app-custom-button
+  [id]="btn.id"
+  [text]="btn.text"
+  (buttonClick)="handleButtonClick($event)"
+  [className]="btn.class"
+>
+</app-custom-button>
+}
